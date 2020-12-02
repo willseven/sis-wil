@@ -8,7 +8,73 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 </head>
 <body>
+  <!-- MODAL DE NAVEGACION -->
+  <nav class="z-depth-0 yellow darken-3">
+    <div class="nav-wrapper container">
+      <a href="#" class="brand-logo">
+        Fire-Quotes
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="logged-in">
+          <a href="#" class="white-text modal-trigger" data-target="modal-account">Account</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text modal-trigger" data-target="modal-create">Create Quote</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text modal-trigger" data-target="modal-login">login</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text modal-trigger" data-target="modal-signup">Sign up</a>
+        </li>
+        <li class="logged-in">
+          <a href="#" class="white-text" id="logout">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- MODAL DE REGISTRO -->
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4>
+      <br />
+      <form action="" id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose password</label>
+        </div>
+        <div class="input-field">
+          <input type="text" id="signup-bio" required />
+          <label for="signup-bio">Set a bio</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+      </form>
+    </div>
+  </div>
+  <!-- MODAL DE LOGIN -->
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4>
+      <br />
+      <form action="" id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Your password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Login</button>
+      </form>
+    </div>
+  </div>
     
+
 
     <!-- DEFINIENDO LA DIRECCION DE CDN, Y LAS FUNCIONES -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
@@ -18,40 +84,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-functions.js"></script>
     <script src="./js/config/firebase.config.js"></script>
     <script src="./js/config/materialize.config.js"></script>
+    <script src="./js/utils/definitions.js"></script>
+    <script src="js/auth.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-W
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-  var firebaseConfig = {
-    apiKey: "AIzaSyAb5ILYCfjg50d-245eDE8jG2aZXFmRVuE",
-    authDomain: "wil-sistemas-operativos.firebaseapp.com",
-    databaseURL: "https://wil-sistemas-operativos.firebaseio.com",
-    projectId: "wil-sistemas-operativos",
-    storageBucket: "wil-sistemas-operativos.appspot.com",
-    messagingSenderId: "802887522465",
-    appId: "1:802887522465:web:11cc3c5b6cea12eb1ab8e0",
-    measurementId: "G-S4M50DF5GS"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
