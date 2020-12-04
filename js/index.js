@@ -1,4 +1,4 @@
-async function setupID(user) {
+async function setupUI(user) {
     if (user) {
         //settear la interfaz grafica
         const userCollection = (await db
@@ -12,11 +12,27 @@ async function setupID(user) {
         `;
 
         accountDetails.innerHTML = html;
-
-        loggedInMenu.forEach((menu) => (menu.style.display = "block"));
-        loggedOutMenu.forEach((menu) => (menu.style.display = "none"));
-    } else {
-        loggedInMenu.forEach((menu) => (menu.style.display = "none"));
-        loggedOutMenu.forEach((menu) => (menu.style.display = "block"));
+        loggedInMenu.forEach(menu => (menu.style.display = "block"));
+        loggedOutMenu.forEach(menu => (menu.style.display = "none"));
+      } else {
+        loggedInMenu.forEach(menu => (menu.style.display = "none"));
+        loggedOutMenu.forEach(menu => (menu.style.display = "block"));
+      }
     }
-}
+
+    async function setupQuotes(quotes) {
+        let html = "";
+        quotes.forEach(doc => {
+          const quote = doc.data();
+          const li = `
+            <li>
+              <div class="collapsible-header grey lighten-4">${quote.author}</div>
+              <div class="collapsible-body white lighten-4">${quote.message}</div>
+            </li>
+          `;
+      
+          html += li;
+        });
+      
+        quotesUl.innerHTML = html;
+      }

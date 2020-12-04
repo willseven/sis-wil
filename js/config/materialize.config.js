@@ -1,7 +1,8 @@
-document.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", () => {
     const modals = document.querySelectorAll(".modal");
-
-     M.Modal.init(modals);
-     const items = document.querySelectorAll("collapsible");
-     M.Collapsible.init(items);
-});
+    debugger;
+    M.Modal.init(modals);
+  
+    const items = document.querySelectorAll(".collapsible");
+    M.Collapsible.init(items);
+  });
