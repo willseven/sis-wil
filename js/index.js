@@ -31,10 +31,11 @@ async function setupUI(user) {
         quotes.forEach(doc => {
           const quote = doc.data();
           const li = `
-            <li>
-              <div class="collapsible-header grey lighten-4">${quote.author}</div>
-              <div class="collapsible-body white lighten-4">${quote.message}</div>
-            </li>
+            <div class="card  teal accent-3">
+              <div class="card-content white-text"><span class="card-title">${quote.message}</span></div>
+              <div class="card-action"><a hre="#" class="teal-text text-darken-3">${quote.author}</a>
+              </div>
+            </div>
           `;
       
           html += li;

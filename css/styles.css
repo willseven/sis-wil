@@ -1,3 +1,6 @@
+.brand-logo{
+    margin-left: 20px;
+}
 .center-align{
     background: rgb(228, 228, 228);
     padding: 10px;
@@ -26,9 +29,35 @@ footer a{
     text-align: center;
     margin-left: 10px;
 }
+.quotes{
+    float: right;
+}
+.perfil{
+    font-weight: bolder;
+    color: black;
+    text-shadow: #fcfcfc 1px 0 5px, #ffffff 0px 0px 5px;
+}
+.card-image img{
+    filter: blur(1px);
+}
+.card-image img:hover{
+        filter: blur(0px);
+        
+        -moz-transition: all 500ms ease-in-out; 
+        -ms-transition: all 500ms ease-in-out; 
+        -o-transition: all 500ms ease-in-out;
+    }
+
+.card-action{
+    color: springgreen;
+    background: red;
+}
 
 @media screen and (max-width: 800px) {
     .center-align {
       width: 85%;
     }
+  }
+  hr{
+      color: springgreen;
   }
