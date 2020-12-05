@@ -10,8 +10,8 @@ async function setupUI(user) {
             .get()).data();
 
         const html = `
-            <div><strong>Logged in as </strong>${user.email}</div>
-            <div><strong>Logged in as </strong>${userCollection.bio}</div>
+            <div><b>Correo electronico </b>${user.email}</div>
+            <div><b>Nombre de usuario </b>${userCollection.bio}</div>
         `;
 
         accountDetails.innerHTML = html;
@@ -19,7 +19,7 @@ async function setupUI(user) {
         loggedOutMenu.forEach(menu => (menu.style.display = "none"));
       } else {
         // quotesUl.innerHTML += "<h3 class='center-align'>Please, login to enjoy our qoutes!</h3>"
-        quotesUl.innerHTML += "<h3 class='center-align'>Please, login to enjoy our quotes!</h3>";
+        quotesUl.innerHTML += "<h4 class='center-align'>Porfavor inicia sesion o registrate para poder leer las experiencias de las personas que forman parte de esta comunidad!</h4><h4 class='center-align'>Tambien puedes contar una experiencia, dar algun consejo o decir lo que piensas y compartirlo con esta comunidad!</h4><h4 class='center-align'>Esta aplicacion web es muy sencilla pero funcional, creada por <b>Wilson Condori Pairumani</b> para la materia de Sistemas Operativos de la Universidad Publica de El Alto!</h4>";
         loggedInMenu.forEach(menu => (menu.style.display = "none"));
         loggedOutMenu.forEach(menu => (menu.style.display = "block"));
         adminItems.forEach(el => (el.style.display = "none"));

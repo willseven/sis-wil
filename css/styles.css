@@ -1,0 +1,34 @@
+.center-align{
+    background: rgb(228, 228, 228);
+    padding: 10px;
+    border-radius: 5px;
+    padding-bottom: 20px;
+    font-size: 21px;
+    font-family: candara;
+    width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+    box-shadow: 10px 10px 10px #888888;
+}
+
+footer{
+    top: 80%;
+}
+.imagina{
+    width: 40px;
+    margin-bottom: 10px;
+}
+footer a{
+    display: flex;
+    
+}
+.contac{
+    text-align: center;
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 800px) {
+    .center-align {
+      width: 85%;
+    }
+  }
